@@ -1,0 +1,66 @@
+June 16 2014 Lab Nightly.
+
+Facebook mock up, perhaps.
+You have been tasked with rewriting the basics of the app in rails.
+
+So, after doing some digging on the www, I was able to come up with a few things
+hopefully allowing me to understand just exactly how mvp works, though I don't see
+a huge gap between mvc, and mvp. However, my instructor would win the debate, really.
+Anyway, my nightly assigement was to rewrite the basics of facebook using rails.
+Although I'm struggling with the thinking phase, and hell, the learning phase; I'm
+going to give this a shot.
+
+MVP according to some soruces, which I won't disclose, as I'm using my own words,
+is basically a set of classes which describes how the business logic and data are
+brought together. facebook, or mark at the time pawned a set of ideas and turned
+a college idea of connecting friends on the wwww, and perhaps trying to get a
+piece of ass into a gold mine. seriously. on that note, he more less esblished
+the first social media outlet. well, maybe myspace, but that was trashy.
+
+basic idea: bringing together friends and having a place on the web to hang out,
+post baby pictures, and writing happy fucking birthday on a friends wall.
+
+marketing.
+then - college students at the time.
+
+now - connecting the world and forming a society which will be runned by fb, and
+of course, online marketing.
+
+yes, umm, I'd like some balsamic on my app, please?
+
+I wonder if I should mock this up in a rails app right quick. I'm deeply trying
+figure out the paths n shit from rake routes. hold up.
+
+
+What models do I need?
+I made two, however, I might need some more.
+Model Post        Model Facebook
+title:string      name:string
+author:string     email:string
+body:text         password:string
+                  status:boolean
+
+
+What attributes do they have?
+yea, so I think the attributes is exactly what's above, well in the database.
+something which can be removed.
+the enitre facebook attributes, name, email, password, and status can all be
+removed directly from the database. while inputting in the seed.rb file is acceptable,
+I think after making a few mistakes today, just bad practice, or being lazy. 
+
+
+What controllers might I need?
+I put up two controllers pluralized.
+ControllerPosts       ControllerFacebooks
+
+How would I define my routes?
+shit, I need six pages?
+I think I did this wrong.
+Cheezes-MacBook:Facebooker Cheeze$ rake routes
+         Prefix Verb URI Pattern                Controller#Action
+facebooks_index GET  /facebooks/index(.:format) facebooks#index
+ facebooks_show GET  /facebooks/show(.:format)  facebooks#show
+  facebooks_new GET  /facebooks/new(.:format)   facebooks#new
+    posts_index GET  /posts/index(.:format)     posts#index
+     posts_show GET  /posts/show(.:format)      posts#show
+      posts_new GET  /posts/new(.:format)       posts#new
